@@ -1,0 +1,1 @@
+module.exports = '<div class=\'crop-area\'></div>\n';

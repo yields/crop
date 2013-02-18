@@ -1,0 +1,22 @@
+{
+  "name": "crop",
+  "repo": "yields/crop",
+  "description": "Image cropper",
+  "version": "0.0.1",
+  "keywords": ["cropper", "image", "crop"],
+  "dependencies": {
+    "ui-component/draggable": "*",
+    "ui-component/resizable": "*",
+    "component/emitter": "*",
+    "component/domify": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "styles": [
+    "crop.css"
+  ]
+}

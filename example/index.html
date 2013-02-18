@@ -1,0 +1,47 @@
+<script src='../build/build.js'></script>
+<link rel='stylesheet' type='text/css' href='../build/build.css'>
+<style>
+  #crop {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 10px;
+  }#crop img {
+    width: 500px;
+    height: 500px;
+  }input {
+    width: 80px;
+  }
+</style>
+
+<div id='crop'>
+  <img src='cat.jpg' alt='cat' />
+</div>
+
+<div>
+  left:
+  <input type='text' name='left' />
+  top:
+  <input type='text' name='top' />
+  width:
+  <input type='text' name='width' />
+  height:
+  <input type='text' name='height' />
+</div>
+
+<script>
+var crop = require('crop');
+var el = document.getElementById('crop');
+var cropper = crop(el).build();
+var els = {};
+els.left = document.querySelector('[name=left]');
+els.top = document.querySelector('[name=top]');
+els.height = document.querySelector('[name=height]');
+els.width = document.querySelector('[name=width]');
+
+cropper.on('crop', function(o){
+  for (var key in o) {
+    els[key].value = o[key];
+  }
+});
+</script>
