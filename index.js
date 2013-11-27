@@ -25,7 +25,7 @@ module.exports = function(el, opts){
 
 /**
  * initialize new `Cropper`.
- * 
+ *
  * @param {Element} el
  * @param {Object} opts
  */
@@ -43,13 +43,13 @@ emitter(Cropper.prototype);
 
 /**
  * build cropper.
- * 
+ *
  * @return {Cropper}
  */
 
 Cropper.prototype.build = function(){
   var self = this;
-  this.area = domify(tpl)[0];
+  this.area = domify(tpl);
   this.draggable = draggable(this.area);
   this.resizable = resizable(this.area);
   this.draggable.on('end', crop);
